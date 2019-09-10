@@ -1,0 +1,6 @@
+*.iml
+*test.go
+Dockerfile
+.idea
+.dockerignore
+.gitignore
