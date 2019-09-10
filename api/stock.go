@@ -20,7 +20,6 @@ func GetStocks(w http.ResponseWriter, r *http.Request) {
 	symbol := vars["symbol"]
 
 	res, _ := http.Get(fmt.Sprintf("%s?symbol=%s&api_token=%s", url, symbol, token))
-	defer res.Body.Close()
 	bytes, _ := ioutil.ReadAll(res.Body)
 
 	w.WriteHeader(http.StatusOK)
